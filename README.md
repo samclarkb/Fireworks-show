@@ -19,7 +19,7 @@
 
 ## :chart_with_upwards_trend: Process
 
-Interested in my process of making the application? Click [here](https://github.com/samclarkb/Fireworks-show/wiki/Process)!
+geinteresseerd in mijn proces tijdens het maken van dit project? klik [hier](https://github.com/samclarkb/Fireworks-show/wiki/Proces)!
 
 ## :memo: Wishlist
 There are a few things I didn't get done due to lack of time:
