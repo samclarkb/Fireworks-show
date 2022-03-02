@@ -180,165 +180,114 @@ body > div > div:nth-of-type(2) > div {
 
 /* vuurwerk */
 
-body > div > div:nth-of-type(3) {
+body > div > div:nth-of-type(3) > div:nth-of-type(1) {
 	position: absolute;
 }
-.explosion {
+body > div > div:nth-of-type(3) > div:nth-of-type(1) > div {
 	position: absolute;
 	left: -20vw;
-	bottom: 0;
-	width: 0.25vw;
+	width: 0.2vw;
 	height: 5vw;
 	transform-origin: 50% 100%;
-	/* background-color: rgba(0, 0, 0, 0.2); */
 	overflow: hidden;
 }
-.explosion:nth-child(1) {
-	transform: rotate(0deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(1) {
+	transform: rotate(0deg) translateY(-1vw);
 }
-.explosion:nth-child(2) {
-	transform: rotate(30deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(2) {
+	transform: rotate(30deg) translateY(-1vw);
 }
-.explosion:nth-child(3) {
-	transform: rotate(60deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(3) {
+	transform: rotate(60deg) translateY(-1vw);
 }
-.explosion:nth-child(4) {
-	transform: rotate(90deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(4) {
+	transform: rotate(90deg) translateY(-1vw);
 }
-.explosion:nth-child(5) {
-	transform: rotate(120deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(5) {
+	transform: rotate(120deg) translateY(-1vw);
 }
-.explosion:nth-child(6) {
-	transform: rotate(150deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(6) {
+	transform: rotate(150deg) translateY(-1vw);
 }
-.explosion:nth-child(7) {
-	transform: rotate(180deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(7) {
+	transform: rotate(180deg) translateY(-1vw);
 }
-.explosion:nth-child(8) {
-	transform: rotate(210deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(8) {
+	transform: rotate(210deg) translateY(-1vw);
 }
-.explosion:nth-child(9) {
-	transform: rotate(240deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(9) {
+	transform: rotate(240deg) translateY(-1vw);
 }
-.explosion:nth-child(10) {
-	transform: rotate(270deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(10) {
+	transform: rotate(270deg) translateY(-1vw);
 }
-.explosion:nth-child(11) {
-	transform: rotate(300deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(11) {
+	transform: rotate(300deg) translateY(-1vw);
 }
-.explosion:nth-child(12) {
-	transform: rotate(330deg) translateY(-2vw);
+body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(12) {
+	transform: rotate(330deg) translateY(-1vw);
 }
 
-.explosion::before {
+body > div > div:nth-of-type(3) > div:nth-of-type(1) > div::before {
 	content: '';
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 100%;
 	height: 2.8vw;
-	background-color: #5b59c0;
-}
-
-.explosion:nth-child(2n)::before {
 	background-color: pink;
 }
 
-@keyframes explosion {
+@keyframes explosie {
 	0% {
 		top: 100%;
 		opacity: 100%;
 	}
-	33%,
+	40%,
 	100% {
 		top: -60%;
 		opacity: 50%;
 	}
 }
 
-body > div > div:nth-of-type(3) {
-	left: 50%;
-	top: 50%;
-}
-body > div > div:nth-of-type(3) .explosion::before {
-	animation: explosion 1.8s ease-in-out infinite;
+body > div > div:nth-of-type(3) div:nth-of-type(1) {
+	left: 40%;
+	top: 30%;
 }
 
-/* body > div > div:nth-of-type(3) > ul li {
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(1) > div::before {
+	animation: explosie 2s ease-in-out infinite;
+	animation-delay: 2s;
+}
+
+/* pijl vuurwerk */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
+	background-color: pink;
+	width: 0.25vw;
+	border-radius: 25%;
+	height: 0.5vw;
 	position: absolute;
-	left: 0.5vw;
 	bottom: 0;
-	width: 0.5vw;
-	height: 4vw;
-	transform-origin: 50% 100%;
-	overflow: hidden;
-}
-
-body > div > div:nth-of-type(3) > ul li:nth-of-type(1) {
-	transform: rotate(0deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(2) {
-	transform: rotate(30deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(3) {
-	transform: rotate(60deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(4) {
-	transform: rotate(90deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(5) {
-	transform: rotate(120deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(6) {
-	transform: rotate(150deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(7) {
-	transform: rotate(180deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(8) {
-	transform: rotate(210deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(9) {
-	transform: rotate(240deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(10) {
-	transform: rotate(270deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(11) {
-	transform: rotate(300deg) translateY(-1vw);
-}
-body > div > div:nth-of-type(3) > ul li:nth-of-type(12) {
-	transform: rotate(330deg) translateY(-1vw);
-}
-
-body > div > div:nth-of-type(3) > ul li::before {
-	content: '';
-	position: relative;
 	left: 0;
-	right: 0;
-	top: 100%;
-	height: 5vw;
-	background-color: #f5cf52;
+	animation: luchtIn 2s ease-in-out infinite;
 }
 
-@keyframes explosion {
-	0% {
-		top: 100%;
+@keyframes luchtIn {
+	0%,
+	45% {
+		transform: translate(20vw, -20vw);
+		opacity: 100%;
 	}
-	33%,
+	95% {
+		transform: translate(20vw, -42vw);
+		opacity: 100%;
+	}
+	96%,
 	100% {
-		top: -50%;
+		transform: translate(20vw, -42vw);
+		opacity: 0%;
 	}
 }
-
-body > div > div:nth-of-type(3) > ul {
-	left: 50%;
-	top: 50%;
-	transform: scale(1);
-}
-body > div > div:nth-of-type(3) > ul::before {
-	animation: explosion 2s ease-in-out infinite;
-} */
 
 /* Berg */
 body > div > div:nth-of-type(4) {
@@ -393,23 +342,6 @@ body > div > div:nth-of-type(4)::after {
 		transparent 0
 	); */
 }
-
-/* body > div > div:nth-of-type(2)::after {
-	content: '';
-	width: 6vw;
-	height: 6vw;
-	position: absolute;
-	opacity: 80%;
-	transform: scaleY(-1) translate(12%, -533%);
-	background-color: white;
-	background: conic-gradient(
-		at 50% 50%,
-		transparent 135deg,
-		white 0,
-		white 225deg,
-		transparent 0
-	);
-} */
 
 /* omringende bergen  */
 body > div > div:nth-of-type(5) {
@@ -950,4 +882,14 @@ body > div > div:nth-of-type(7) {
 		99% 53.55%,
 		100% 52.4%
 	);
+}
+
+/* checkbox */
+
+input[type='checkbox'] {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translate(2.5vw, -2.5vw);
+	z-index: 1;
 }
