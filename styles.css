@@ -188,7 +188,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(1) > div {
 	left: -20vw;
 	width: 0.2vw;
 	height: 5vw;
-	transform-origin: 50% 100%;
+	transform-origin: 50% 80%;
 	overflow: hidden;
 }
 body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(1) {
@@ -238,6 +238,10 @@ body > div > div:nth-of-type(3) > div:nth-of-type(1) > div::before {
 	background-color: pink;
 }
 
+body > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
 @keyframes explosie {
 	0% {
 		top: 100%;
@@ -256,8 +260,8 @@ body > div > div:nth-of-type(3) div:nth-of-type(1) {
 }
 
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(1) > div::before {
-	animation: explosie 2s ease-in-out infinite;
-	animation-delay: 2s;
+	animation: explosie 1.75s ease-in-out infinite;
+	animation-delay: 1.75s;
 }
 
 /* pijl vuurwerk */
@@ -269,7 +273,7 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	animation: luchtIn 2s ease-in-out infinite;
+	animation: luchtIn 1.75s ease-in-out infinite;
 }
 
 @keyframes luchtIn {
@@ -298,9 +302,14 @@ body > div > div:nth-of-type(4) {
 	background: conic-gradient(
 		at 50% 50%,
 		transparent 135deg,
-		rgb(8, 20, 61) 0,
+		rgb(4, 12, 42) 0,
 		rgba(4, 12, 42, 1) 225deg,
 		transparent 0
+	);
+	background-image: linear-gradient(
+		transparent 135deg,
+		rgb(4, 12, 42) 0,
+		rgb(38, 63, 153) 225deg
 	);
 }
 
@@ -334,6 +343,9 @@ body > div > div:nth-of-type(4)::after {
 	border-left: 5vw solid transparent;
 	border-right: 5vw solid transparent;
 	width: 5vw;
+	clip-path: path(
+		'M98.035 125.537s-13.867 15.71-22.535 22.427c-8.667 6.717 7.097-.882 10.74-4.454 3.642-3.573-4.483 7.144-4.483 7.144s-1.752 3.853 7.424-6.724-.21 3.432-.21 3.432-4.062 5.884 5.254-3.292c9.315-9.176.07-.062.07-.062s-3.999 7.58-1.452 5.156c2.548-2.424 4.437-8.094 4.437-8.094l-.862 6.04s-.206 3.492 2.054-3.492c2.26-6.985.207-.631.207-.631s.254 2.48.564 2.987c.31.507 1.86-5.974 1.86-5.974s2.987 6.453 4.368 6.791c1.38.338.028-4.678.028-4.678s2.255 5.326 3.072 5.27c.817-.056-1.578-5.805-1.578-5.805s6.002 5.72 7.13 5.833c1.127.113-3.326-4.48-3.326-4.48s5.947 3.55 6.99 4.593c1.042 1.043-1.86-5.242-1.86-5.242l6.48 6.262s4.827 4.36-3.255-6.512c-8.083-10.874 11.92 9.07 11.92 9.07s-.756-3.488-12.676-15.118c-11.92-11.629-9.827-9.943-10.525-10.698-.697-.756-2.326-1.221-2.326-1.221s-5.95-.835-7.51 1.472z'
+	);
 	/* background: conic-gradient(
 		at 50% 50%,
 		transparent 135deg,
