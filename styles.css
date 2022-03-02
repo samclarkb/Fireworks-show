@@ -1,3 +1,7 @@
+:root {
+	--weerspiegeling: 65%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -174,8 +178,170 @@ body > div > div:nth-of-type(2) > div {
 	);
 } */
 
-/* Berg */
+/* vuurwerk */
+
 body > div > div:nth-of-type(3) {
+	position: absolute;
+}
+.explosion {
+	position: absolute;
+	left: -20vw;
+	bottom: 0;
+	width: 0.25vw;
+	height: 5vw;
+	transform-origin: 50% 100%;
+	/* background-color: rgba(0, 0, 0, 0.2); */
+	overflow: hidden;
+}
+.explosion:nth-child(1) {
+	transform: rotate(0deg) translateY(-2vw);
+}
+.explosion:nth-child(2) {
+	transform: rotate(30deg) translateY(-2vw);
+}
+.explosion:nth-child(3) {
+	transform: rotate(60deg) translateY(-2vw);
+}
+.explosion:nth-child(4) {
+	transform: rotate(90deg) translateY(-2vw);
+}
+.explosion:nth-child(5) {
+	transform: rotate(120deg) translateY(-2vw);
+}
+.explosion:nth-child(6) {
+	transform: rotate(150deg) translateY(-2vw);
+}
+.explosion:nth-child(7) {
+	transform: rotate(180deg) translateY(-2vw);
+}
+.explosion:nth-child(8) {
+	transform: rotate(210deg) translateY(-2vw);
+}
+.explosion:nth-child(9) {
+	transform: rotate(240deg) translateY(-2vw);
+}
+.explosion:nth-child(10) {
+	transform: rotate(270deg) translateY(-2vw);
+}
+.explosion:nth-child(11) {
+	transform: rotate(300deg) translateY(-2vw);
+}
+.explosion:nth-child(12) {
+	transform: rotate(330deg) translateY(-2vw);
+}
+
+.explosion::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 2.8vw;
+	background-color: #5b59c0;
+}
+
+.explosion:nth-child(2n)::before {
+	background-color: pink;
+}
+
+@keyframes explosion {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	33%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) {
+	left: 50%;
+	top: 50%;
+}
+body > div > div:nth-of-type(3) .explosion::before {
+	animation: explosion 1.8s ease-in-out infinite;
+}
+
+/* body > div > div:nth-of-type(3) > ul li {
+	position: absolute;
+	left: 0.5vw;
+	bottom: 0;
+	width: 0.5vw;
+	height: 4vw;
+	transform-origin: 50% 100%;
+	overflow: hidden;
+}
+
+body > div > div:nth-of-type(3) > ul li:nth-of-type(1) {
+	transform: rotate(0deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(2) {
+	transform: rotate(30deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(3) {
+	transform: rotate(60deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(4) {
+	transform: rotate(90deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(5) {
+	transform: rotate(120deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(6) {
+	transform: rotate(150deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(7) {
+	transform: rotate(180deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(8) {
+	transform: rotate(210deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(9) {
+	transform: rotate(240deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(10) {
+	transform: rotate(270deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(11) {
+	transform: rotate(300deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) > ul li:nth-of-type(12) {
+	transform: rotate(330deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > ul li::before {
+	content: '';
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 5vw;
+	background-color: #f5cf52;
+}
+
+@keyframes explosion {
+	0% {
+		top: 100%;
+	}
+	33%,
+	100% {
+		top: -50%;
+	}
+}
+
+body > div > div:nth-of-type(3) > ul {
+	left: 50%;
+	top: 50%;
+	transform: scale(1);
+}
+body > div > div:nth-of-type(3) > ul::before {
+	animation: explosion 2s ease-in-out infinite;
+} */
+
+/* Berg */
+body > div > div:nth-of-type(4) {
 	width: 50vw;
 	height: 50vw;
 	position: relative;
@@ -189,7 +355,7 @@ body > div > div:nth-of-type(3) {
 	);
 }
 
-body > div > div:nth-of-type(3)::before {
+body > div > div:nth-of-type(4)::before {
 	content: '';
 	opacity: 65%;
 	background: conic-gradient(
@@ -206,7 +372,7 @@ body > div > div:nth-of-type(3)::before {
 }
 
 /* berg top */
-body > div > div:nth-of-type(3)::after {
+body > div > div:nth-of-type(4)::after {
 	content: '';
 	width: 10vw;
 	height: 10vw;
@@ -246,7 +412,7 @@ body > div > div:nth-of-type(3)::after {
 } */
 
 /* omringende bergen  */
-body > div > div:nth-of-type(4) {
+body > div > div:nth-of-type(5) {
 	background-color: rgba(4, 12, 42, 1);
 	width: 100vw;
 	height: 18%;
@@ -361,7 +527,7 @@ body > div > div:nth-of-type(4) {
 	);
 }
 
-body > div > div:nth-of-type(4)::after {
+body > div > div:nth-of-type(5)::after {
 	content: '';
 	opacity: 100%;
 	width: 100vw;
@@ -478,7 +644,7 @@ body > div > div:nth-of-type(4)::after {
 }
 
 /* Water */
-body > div > div:nth-of-type(5) {
+body > div > div:nth-of-type(6) {
 	background-repeat: no-repeat;
 	background: rgb(4, 12, 42);
 	background: linear-gradient(
@@ -496,7 +662,7 @@ body > div > div:nth-of-type(5) {
 }
 
 /* golven */
-body > div > div:nth-of-type(5) > div > ul {
+body > div > div:nth-of-type(6) > div > ul {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -513,27 +679,27 @@ body > div > div:nth-of-type(5) > div > ul {
 	background-color: white;
 } */
 
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(3n) {
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(3n) {
 	width: 10vw;
 	transform: translateY(5000%);
 }
 
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(5n) {
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(5n) {
 	height: 0.2vw;
 }
 
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(4),
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(5) {
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(4),
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(5) {
 	transform: translate(500%, 1400%);
 }
 
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(12n) {
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(12n) {
 	transform: translate(-250%, -9000%);
 	width: 7vw;
 }
 
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(9),
-body > div > div:nth-of-type(5) > div > ul li:nth-of-type(15) {
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(9),
+body > div > div:nth-of-type(6) > div > ul li:nth-of-type(15) {
 	width: 10vw;
 	transform: translateY(-3000%);
 }
@@ -664,7 +830,7 @@ body > div > div:last-of-type {
 	);
 }
 
-body > div > div:nth-of-type(6) {
+body > div > div:nth-of-type(7) {
 	background-color: rgba(4, 12, 42, 1);
 	background: linear-gradient(360deg, transparent 0, transparent 50px, #565453 0, #565453 100%);
 	background: linear-gradient(
