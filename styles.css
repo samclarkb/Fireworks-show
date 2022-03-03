@@ -1,5 +1,5 @@
 :root {
-	--weerspiegeling: 65%;
+	--weerspiegeling: 55%;
 	--omringende-bergen: polygon(
 		100% 0%,
 		0% 0%,
@@ -104,6 +104,20 @@
 		98% 54.65%,
 		99% 53.55%,
 		100% 52.4%
+	);
+	--berg-top: polygon(
+		49% 0%,
+		0% 71%,
+		20% 62%,
+		27% 71%,
+		40% 65%,
+		33% 80%,
+		54% 66%,
+		64% 72%,
+		70% 67%,
+		84% 79%,
+		86% 67%,
+		100% 73%
 	);
 }
 
@@ -215,7 +229,7 @@ body > div > div:nth-of-type(2) > div {
 	height: 7.5vw;
 	border-radius: 50%;
 	position: absolute;
-	transform: translate(48%, 532%) rotate(15deg);
+	transform: translate(45%, 533%) rotate(15deg);
 	border-image: linear-gradient(
 		0deg,
 		rgba(228, 227, 179, 0.5) 50%,
@@ -341,6 +355,237 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
 	}
 }
 
+/* vuurwerk 2 */
+
+body > div > div:nth-of-type(3) > div:nth-of-type(3) {
+	position: absolute;
+}
+body > div > div:nth-of-type(3) > div:nth-of-type(3) > div {
+	position: absolute;
+	width: 0.2vw;
+	height: 5vw;
+	transform-origin: 50% 80%;
+	overflow: hidden;
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(1) {
+	transform: rotate(-15deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(2) {
+	transform: rotate(15deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(3) {
+	transform: rotate(45deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(4) {
+	transform: rotate(75deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(5) {
+	transform: rotate(105deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(6) {
+	transform: rotate(135deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(7) {
+	transform: rotate(165deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(8) {
+	transform: rotate(195deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(9) {
+	transform: rotate(225deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(10) {
+	transform: rotate(255deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(11) {
+	transform: rotate(285deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(3) > div:nth-child(12) {
+	transform: rotate(315deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(3) > div::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 2.8vw;
+	background-color: pink;
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
+@keyframes explosie2 {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	40%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) div:nth-of-type(3) {
+	left: 40%;
+	top: 17.5%;
+}
+
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(3) > div::before {
+	animation: explosie2 1.75s ease-in-out infinite;
+	animation-delay: 3s;
+}
+
+/* pijl vuurwerk 2 */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(4) {
+	background-color: pink;
+	width: 0.25vw;
+	border-radius: 25%;
+	height: 0.5vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation-delay: 3s;
+	animation: luchtIn2 1.75s ease-in-out infinite;
+}
+
+@keyframes luchtIn2 {
+	0%,
+	45% {
+		transform: translate(40vw, -20vw);
+		opacity: 100%;
+	}
+	95% {
+		transform: translate(40vw, -49vw);
+		opacity: 100%;
+	}
+	96%,
+	100% {
+		transform: translateY(40vw, -40vw);
+		opacity: 0%;
+	}
+}
+
+/* vuurwerk 3 */
+
+body > div > div:nth-of-type(3) > div:nth-of-type(5) {
+	position: absolute;
+}
+body > div > div:nth-of-type(3) > div:nth-of-type(5) > div {
+	position: absolute;
+	left: -20vw;
+	width: 0.2vw;
+	height: 5vw;
+	transform-origin: 50% 80%;
+	overflow: hidden;
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(1) {
+	transform: rotate(0deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(2) {
+	transform: rotate(30deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(3) {
+	transform: rotate(60deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(4) {
+	transform: rotate(90deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(5) {
+	transform: rotate(120deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(6) {
+	transform: rotate(150deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(7) {
+	transform: rotate(180deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(8) {
+	transform: rotate(210deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(9) {
+	transform: rotate(240deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(10) {
+	transform: rotate(270deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(11) {
+	transform: rotate(300deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(5) > div:nth-child(12) {
+	transform: rotate(330deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(5) > div::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 2.8vw;
+	background-color: pink;
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
+@keyframes explosie3 {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	40%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) div:nth-of-type(5) {
+	left: 90%;
+	top: 30%;
+}
+
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(5) > div::before {
+	animation: explosie3 1.75s ease-in-out infinite;
+	animation-delay: 2.1s;
+}
+
+/* pijl vuurwerk 3 */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(6) {
+	background-color: pink;
+	width: 0.25vw;
+	border-radius: 25%;
+	height: 0.5vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation-delay: 2.1s;
+	animation: luchtIn3 1.75s ease-in-out infinite;
+}
+
+@keyframes luchtIn3 {
+	0%,
+	45% {
+		transform: translate(70vw, -20vw);
+		opacity: 100%;
+	}
+	95% {
+		transform: translate(70vw, -42vw);
+		opacity: 100%;
+	}
+	96%,
+	100% {
+		transform: translate(70vw, -42vw);
+		opacity: 0%;
+	}
+}
+
 /* Berg */
 body > div > div:nth-of-type(4) {
 	width: 50vw;
@@ -375,16 +620,13 @@ body > div > div:nth-of-type(4)::before {
 body > div > div:nth-of-type(4)::after {
 	content: '';
 	position: absolute;
-	width: auto;
+	width: 5vw;
 	height: auto;
 	bottom: 0;
-	transform: translate(40%, 35%);
-	/* width: auto;
-	height: auto; */
-	border: 20vw solid white;
-	clip-path: path(
-		'm 38.976907,4.2710829 c 0,0 -20.911179,23.6884521 -33.9806675,33.8172981 -13.0694873,10.128847 10.7012245,-1.329427 16.1935615,-6.716138 5.492338,-5.386711 -6.759798,10.773437 -6.759798,10.773437 0,0 -2.640547,5.8092 11.195914,-10.139703 13.836465,-15.948904 -0.316862,5.175466 -0.316862,5.175466 0,0 -6.126071,8.872237 7.921636,-4.964222 14.047695,-13.836459 0.10563,-0.09319 0.10563,-0.09319 0,0 -6.029528,11.43009 -2.188455,7.774878 3.841066,-3.655212 6.690892,-12.204679 6.690892,-12.204679 l -1.301007,9.10705 c 0,0 -0.309765,5.265987 3.097637,-5.265986 3.407387,-10.531959 0.312758,-0.951452 0.312758,-0.951452 0,0 0.382455,3.73958 0.849895,4.504487 0.467455,0.764907 2.80467,-9.00896 2.80467,-9.00896 0,0 4.504488,9.731374 6.586744,10.241322 2.082256,0.509934 0.04252,-7.054198 0.04252,-7.054198 0,0 3.39962,8.031587 4.631967,7.946585 1.232363,-0.08505 -2.379723,-8.753986 -2.379723,-8.753986 0,0 9.051468,8.626507 10.75127,8.796495 1.699803,0.169972 -5.01442,-6.756732 -5.01442,-6.756732 0,0 8.966467,5.354381 10.538789,6.926704 1.572323,1.572323 -2.804685,-7.904092 -2.804685,-7.904092 l 9.773641,9.442185 c 0,0 7.277401,6.575962 -4.910042,-9.8201 -12.187444,-16.396047 17.974281,13.678007 17.974281,13.678007 0,0 -1.139837,-5.26077 -19.114118,-22.796668 C 51.704658,2.4890084 54.86111,5.0317077 53.808959,3.8918713 52.756808,2.7520499 50.30178,2.050611 50.30178,2.050611 c 0,0 -8.9717,-1.2581629 -11.324837,2.220502 z'
-	);
+	transform: translate(117.6%, -150.25%);
+	border: 5vw solid white;
+	background-color: white;
+	clip-path: var(--berg-top);
 }
 
 /* omringende bergen  */
@@ -432,18 +674,13 @@ body > div > div:nth-of-type(6) {
 body > div > div:nth-of-type(6)::before {
 	content: '';
 	position: absolute;
-	width: 5vw;
-	height: 2.5vw;
-	top: 0;
-	opacity: 80%;
-	transform: translate(50%, 50%) rotate(180deg);
-	/* width: auto;
-	height: auto; */
-	/* attr(viewbox,"0 0 90 45"); */
-	border: 20vw solid white;
-	clip-path: path(
-		'm 38.976907,4.2710829 c 0,0 -20.911179,23.6884521 -33.9806675,33.8172981 -13.0694873,10.128847 10.7012245,-1.329427 16.1935615,-6.716138 5.492338,-5.386711 -6.759798,10.773437 -6.759798,10.773437 0,0 -2.640547,5.8092 11.195914,-10.139703 13.836465,-15.948904 -0.316862,5.175466 -0.316862,5.175466 0,0 -6.126071,8.872237 7.921636,-4.964222 14.047695,-13.836459 0.10563,-0.09319 0.10563,-0.09319 0,0 -6.029528,11.43009 -2.188455,7.774878 3.841066,-3.655212 6.690892,-12.204679 6.690892,-12.204679 l -1.301007,9.10705 c 0,0 -0.309765,5.265987 3.097637,-5.265986 3.407387,-10.531959 0.312758,-0.951452 0.312758,-0.951452 0,0 0.382455,3.73958 0.849895,4.504487 0.467455,0.764907 2.80467,-9.00896 2.80467,-9.00896 0,0 4.504488,9.731374 6.586744,10.241322 2.082256,0.509934 0.04252,-7.054198 0.04252,-7.054198 0,0 3.39962,8.031587 4.631967,7.946585 1.232363,-0.08505 -2.379723,-8.753986 -2.379723,-8.753986 0,0 9.051468,8.626507 10.75127,8.796495 1.699803,0.169972 -5.01442,-6.756732 -5.01442,-6.756732 0,0 8.966467,5.354381 10.538789,6.926704 1.572323,1.572323 -2.804685,-7.904092 -2.804685,-7.904092 l 9.773641,9.442185 c 0,0 7.277401,6.575962 -4.910042,-9.8201 -12.187444,-16.396047 17.974281,13.678007 17.974281,13.678007 0,0 -1.139837,-5.26077 -19.114118,-22.796668 C 51.704658,2.4890084 54.86111,5.0317077 53.808959,3.8918713 52.756808,2.7520499 50.30178,2.050611 50.30178,2.050611 c 0,0 -8.9717,-1.2581629 -11.324837,2.220502 z'
-	);
+	width: 11.75vw;
+	opacity: var(--weerspiegeling);
+	bottom: 0;
+	transform: translate(202.6%, -25%) rotate(180deg) scale(0.75);
+	border: 4vw solid white;
+	background-color: white;
+	clip-path: var(--berg-top);
 }
 
 /* golven */
