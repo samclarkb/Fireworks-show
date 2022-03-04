@@ -173,12 +173,16 @@ body > div > div:first-of-type ul li:nth-of-type(3n) {
 	width: 0.1vw;
 	height: 0.1vw;
 	transform: translateX(200%);
+	animation: sterrenAnimatie 1.75s ease-in-out infinite;
+	animation-delay: 0.5s;
 }
 
 body > div > div:first-of-type ul li:nth-of-type(4n) {
 	width: 0.05vw;
 	height: 0.05vw;
 	transform: translate(1200% 800%);
+	animation: sterrenAnimatie 1.75s ease-in-out infinite;
+	animation-delay: 0.25s;
 }
 
 body > div > div:first-of-type ul li:nth-of-type(5n) {
@@ -196,12 +200,31 @@ body > div > div:first-of-type ul li:nth-of-type(7n) {
 	width: 0.12vw;
 	height: 0.12vw;
 	transform: translate(-700%, 6000%);
+	animation: sterrenAnimatie 1.75s ease-in-out infinite;
+	animation-delay: 1.75s;
 }
 
 body > div > div:first-of-type ul li:nth-of-type(10n) {
 	width: 0.1vw;
 	height: 0.1vw;
 	transform: translateY(12000%);
+	animation: sterrenAnimatie 10s ease-in-out infinite;
+	animation-delay: 2s;
+}
+
+@keyframes sterrenAnimatie {
+	0%,
+	30% {
+		opacity: 100%;
+	}
+	50%,
+	65% {
+		opacity: 0%;
+	}
+	85%,
+	100% {
+		opacity: 100%;
+	}
 }
 
 /* Maan */
@@ -453,7 +476,7 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(4) {
 	bottom: 0;
 	left: 0;
 	animation: luchtIn2 1.75s ease-in-out infinite;
-	animation-delay: 1.3s;
+	animation-delay: 3s;
 }
 
 @keyframes luchtIn2 {
@@ -551,7 +574,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(2n)::befo
 
 body > div > div:nth-of-type(3) div:nth-of-type(5) {
 	left: 90%;
-	top: 30%;
+	top: 40%;
 }
 
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(5) > div::before {
@@ -580,12 +603,363 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(6) {
 		opacity: 100%;
 	}
 	95% {
-		transform: translate(70vw, -42vw);
+		transform: translate(70vw, -36.5vw);
 		opacity: 100%;
 	}
 	96%,
 	100% {
-		transform: translate(70vw, -42vw);
+		transform: translate(70vw, -36.5vw);
+		opacity: 0%;
+	}
+}
+
+/* vuurwerk weerspiegeling */
+
+body > div > div:nth-of-type(3) > div:nth-of-type(7) {
+	position: absolute;
+}
+body > div > div:nth-of-type(3) > div:nth-of-type(7) > div {
+	position: absolute;
+	width: 0.1vw;
+	height: 2.5vw;
+	transform-origin: 50% 80%;
+	overflow: hidden;
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(1) {
+	transform: rotate(0deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(2) {
+	transform: rotate(30deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(3) {
+	transform: rotate(60deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(4) {
+	transform: rotate(90deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(5) {
+	transform: rotate(120deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(6) {
+	transform: rotate(150deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(7) {
+	transform: rotate(180deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(8) {
+	transform: rotate(210deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(9) {
+	transform: rotate(240deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(10) {
+	transform: rotate(270deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(11) {
+	transform: rotate(300deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(7) > div:nth-child(12) {
+	transform: rotate(330deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(7) > div::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 1.5vw;
+	background-color: pink;
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(7) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
+@keyframes explosieWeerspiegeling {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	40%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) div:nth-of-type(7) {
+	left: 20%;
+	top: 88%;
+	z-index: 1;
+	opacity: var(--weerspiegeling);
+}
+
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(7) > div::before {
+	animation: explosieWeerspiegeling 1.75s ease-in-out infinite;
+	animation-delay: 1.75s;
+}
+
+/* pijl vuurwerk weerspeigeling */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(8) {
+	background-color: pink;
+	width: 0.125vw;
+	border-radius: 25%;
+	height: 0.25vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: luchtInWeeerspiegeling 1.75s ease-in-out infinite;
+	animation-delay: 1.75s;
+}
+
+@keyframes luchtInWeeerspiegeling {
+	0%,
+	45% {
+		transform: translate(20vw, -20vw);
+		opacity: var(--weerspiegeling);
+	}
+	95% {
+		transform: translate(20vw, -5.5vw);
+		opacity: var(--weerspiegeling);
+	}
+	96%,
+	100% {
+		transform: translateY(20vw, -5.5vw);
+		opacity: 0%;
+	}
+}
+
+/* vuurwerk weerspiegeling 2 */
+
+body > div > div:nth-of-type(3) > div:nth-of-type(9) {
+	position: absolute;
+}
+body > div > div:nth-of-type(3) > div:nth-of-type(9) > div {
+	position: absolute;
+	width: 0.1vw;
+	height: 2.5vw;
+	transform-origin: 50% 80%;
+	overflow: hidden;
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(1) {
+	transform: rotate(-15deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(2) {
+	transform: rotate(15deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(3) {
+	transform: rotate(45deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(4) {
+	transform: rotate(75deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(5) {
+	transform: rotate(105deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(6) {
+	transform: rotate(135deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(7) {
+	transform: rotate(165deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(8) {
+	transform: rotate(195deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(9) {
+	transform: rotate(225deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(10) {
+	transform: rotate(255deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(11) {
+	transform: rotate(285deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(9) > div:nth-child(12) {
+	transform: rotate(315deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(9) > div::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 1.5vw;
+	background-color: pink;
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(9) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
+@keyframes explosieWeerspiegeling2 {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	40%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) div:nth-of-type(9) {
+	left: 40%;
+	top: 95%;
+	z-index: 1;
+	opacity: var(--weerspiegeling);
+}
+
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(9) > div::before {
+	animation: explosieWeerspiegeling2 1.75s ease-in-out infinite;
+	animation-delay: 3s;
+}
+
+/* pijl vuurwerk weerspeigeling 2 */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(10) {
+	background-color: pink;
+	width: 0.125vw;
+	border-radius: 25%;
+	height: 0.25vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: luchtInWeeerspiegeling2 1.75s ease-in-out infinite;
+	animation-delay: 3s;
+}
+
+@keyframes luchtInWeeerspiegeling2 {
+	0%,
+	45% {
+		transform: translate(40vw, -17vw);
+		opacity: var(--weerspiegeling);
+	}
+	95% {
+		transform: translate(40vw, -1.75vw);
+		opacity: var(--weerspiegeling);
+	}
+	96%,
+	100% {
+		transform: translateY(40vw, -1.75vw);
+		opacity: 0%;
+	}
+}
+
+/* vuurwerk weerspiegeling 3 */
+
+body > div > div:nth-of-type(3) > div:nth-of-type(11) {
+	position: absolute;
+}
+body > div > div:nth-of-type(3) > div:nth-of-type(11) > div {
+	position: absolute;
+	width: 0.1vw;
+	height: 2.5vw;
+	transform-origin: 50% 80%;
+	overflow: hidden;
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(1) {
+	transform: rotate(0deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(2) {
+	transform: rotate(30deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(3) {
+	transform: rotate(60deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(4) {
+	transform: rotate(90deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(5) {
+	transform: rotate(120deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(6) {
+	transform: rotate(150deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(7) {
+	transform: rotate(180deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(8) {
+	transform: rotate(210deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(9) {
+	transform: rotate(240deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(10) {
+	transform: rotate(270deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(11) {
+	transform: rotate(300deg) translateY(-1vw);
+}
+body > div > div:nth-of-type(3) div:nth-of-type(11) > div:nth-child(12) {
+	transform: rotate(330deg) translateY(-1vw);
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(11) > div::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 1.5vw;
+	background-color: pink;
+}
+
+body > div > div:nth-of-type(3) > div:nth-of-type(11) > div:nth-of-type(2n)::before {
+	background-color: rgb(190, 121, 121);
+}
+
+@keyframes explosieWeerspiegeling3 {
+	0% {
+		top: 100%;
+		opacity: 100%;
+	}
+	40%,
+	100% {
+		top: -60%;
+		opacity: 50%;
+	}
+}
+
+body > div > div:nth-of-type(3) div:nth-of-type(11) {
+	left: 70%;
+	top: 83%;
+	z-index: 1;
+	opacity: var(--weerspiegeling);
+}
+
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(11) > div::before {
+	animation: explosieWeerspiegeling3 1.75s ease-in-out infinite;
+	animation-delay: 2.1s;
+}
+
+/* pijl vuurwerk weerspeigeling 3 */
+input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(12) {
+	background-color: pink;
+	width: 0.125vw;
+	border-radius: 25%;
+	height: 0.25vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: luchtInWeeerspiegeling3 1.75s ease-in-out infinite;
+	animation-delay: 1.75s;
+}
+
+@keyframes luchtInWeeerspiegeling3 {
+	0%,
+	45% {
+		transform: translate(70vw, -20vw);
+		opacity: var(--weerspiegeling);
+	}
+	95% {
+		transform: translate(70vw, -9.5vw);
+		opacity: var(--weerspiegeling);
+	}
+	96%,
+	100% {
+		transform: translateY(70vw, -9.5vw);
 		opacity: 0%;
 	}
 }
@@ -740,6 +1114,7 @@ body > div > div:last-of-type {
 	bottom: 0;
 	transform: scaleY(-1) rotate(180deg) translateY(-205%);
 	clip-path: var(--omringende-bergen);
+	z-index: 2 !important;
 }
 
 body > div > div:nth-of-type(7) {
