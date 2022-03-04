@@ -1061,39 +1061,6 @@ body > div > div:nth-of-type(6)::before {
 	clip-path: var(--berg-top);
 }
 
-/* golven */
-/* body > div > div:nth-of-type(6) > div > ul {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	list-style: none;
-}
-
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(3n) {
-	width: 10vw;
-	transform: translateY(5000%);
-}
-
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(5n) {
-	height: 0.2vw;
-}
-
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(4),
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(5) {
-	transform: translate(500%, 1400%);
-}
-
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(12n) {
-	transform: translate(-250%, -9000%);
-	width: 7vw;
-}
-
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(9),
-body > div > div:nth-of-type(6) > div > ul li:nth-of-type(15) {
-	width: 10vw;
-	transform: translateY(-3000%);
-} */
-
 /* test omringende bergen */
 body > div > div:last-of-type {
 	background-color: rgba(4, 12, 42, 1);
@@ -1143,4 +1110,31 @@ input[type='checkbox'] {
 	bottom: 0;
 	transform: translate(2.5vw, -2.5vw);
 	z-index: 1;
+	width: 5vw;
+	height: 2.5vw;
+	-webkit-appearance: none;
+	background-color: #c6c6c6;
+	box-shadow: inset 0 0 0.5vw rgba(0, 0, 0, 0.2);
+	border-radius: 20vw;
+	transition: 1s;
+}
+
+input:checked[type='checkbox'] {
+	background-color: rgba(49, 87, 145, 1);
+}
+
+input[type='checkbox']:before {
+	content: '';
+	position: absolute;
+	width: 2.5vw;
+	height: 2.5vw;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: inset 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+	transform: scale(1.1);
+	transition: 1s;
+}
+
+input:checked[type='checkbox']:before {
+	left: 2.5vw;
 }
