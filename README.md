@@ -29,7 +29,7 @@ Dit is het eindresultaat geworden:
 geinteresseerd in mijn proces tijdens het maken van dit project? klik [hier](https://github.com/samclarkb/Fireworks-show/wiki/Proces)!
 
 ## :memo: Wishlist
-There are a few things I didn't get done due to lack of time:
+Er zijn een paar dingen waar ik niet aan toe ben gekomen, maar graag had willen doen:
 * Experimenteren met verschillende soorten vuurwerk animaties
 * gebruik maken van grid
 * Experimenteren met radio buttons en interactie
