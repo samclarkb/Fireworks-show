@@ -188,8 +188,11 @@ body > div > div:first-of-type ul li:nth-of-type(4n) {
 body > div > div:first-of-type ul li:nth-of-type(5n) {
 	width: 0.2vw;
 	height: 0.2vw;
+	animation: sterrenAnimatie 2s ease-in-out infinite;
+	animation-delay: 0.6s;
 	transform: translate(700%, -1000%);
 }
+
 body > div > div:first-of-type ul li:nth-of-type(6n) {
 	width: 0.08vw;
 	height: 0.08vw;
