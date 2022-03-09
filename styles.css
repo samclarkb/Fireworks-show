@@ -129,7 +129,7 @@
 body {
 	background-repeat: no-repeat;
 	height: 100vh;
-	/* overflow-y: hidden; */
+	overflow-y: hidden;
 	background-image: linear-gradient(
 		0deg,
 		rgba(61, 123, 171, 1) 2%,
