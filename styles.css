@@ -139,6 +139,7 @@ body {
 	);
 }
 
+/* Landscap container */
 body > div {
 	display: flex;
 	margin: auto;
@@ -148,7 +149,7 @@ body > div {
 	align-items: center;
 }
 
-/* Sterren  */
+/* Sterren container */
 body > div > div:first-of-type ul {
 	display: flex;
 	justify-content: space-evenly;
@@ -157,6 +158,8 @@ body > div > div:first-of-type ul {
 	left: 0;
 	transform: translateY(35%);
 }
+
+/* Uiterlijk individuele ster */
 body > div > div:first-of-type ul li {
 	opacity: 80%;
 	background-color: white;
@@ -169,6 +172,7 @@ body > div > div:first-of-type ul li {
 	box-shadow: 0 0 6em 0.5em rgba(250, 250, 250, 0.5), 0 0 10em 1em rgba(4, 12, 42, 1);
 }
 
+/* Pseudo classes voor willekeurig effect */
 body > div > div:first-of-type ul li:nth-of-type(3n) {
 	width: 0.1vw;
 	height: 0.1vw;
@@ -215,6 +219,7 @@ body > div > div:first-of-type ul li:nth-of-type(10n) {
 	animation-delay: 2s;
 }
 
+/* flikkerende sterren animatie */
 @keyframes sterrenAnimatie {
 	0%,
 	30% {
@@ -266,8 +271,7 @@ body > div > div:nth-of-type(2) > div {
 	filter: blur(0.2em);
 }
 
-/* vuurwerk */
-
+/* vuurwerk 1 */
 body > div > div:nth-of-type(3) > div:nth-of-type(1) {
 	position: absolute;
 }
@@ -279,6 +283,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(1) > div {
 	transform-origin: 50% 80%;
 	overflow: hidden;
 }
+
 body > div > div:nth-of-type(3) div:nth-of-type(1) > div:nth-child(1) {
 	transform: rotate(0deg) translateY(-1vw);
 }
@@ -330,6 +335,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2n)::befo
 	background-color: rgb(190, 121, 121);
 }
 
+/* vuurwerk animatie */
 @keyframes explosie {
 	0% {
 		top: 100%;
@@ -347,12 +353,13 @@ body > div > div:nth-of-type(3) div:nth-of-type(1) {
 	top: 30%;
 }
 
+/* Interactie */
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(1) > div::before {
 	animation: explosie 1.75s ease-in-out infinite;
 	animation-delay: 1.75s;
 }
 
-/* pijl vuurwerk */
+/* pijl vuurwerk 1 */
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
 	background-color: pink;
 	width: 0.25vw;
@@ -366,6 +373,7 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
 	animation-delay: 0.1s;
 }
 
+/* vuurwerk pijl animatie */
 @keyframes luchtIn {
 	0%,
 	45% {
@@ -384,7 +392,6 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(2) {
 }
 
 /* vuurwerk 2 */
-
 body > div > div:nth-of-type(3) > div:nth-of-type(3) {
 	position: absolute;
 }
@@ -446,6 +453,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2n)::befo
 	background-color: rgb(190, 121, 121);
 }
 
+/* vuurwerk animatie */
 @keyframes explosie2 {
 	0% {
 		top: 100%;
@@ -463,6 +471,7 @@ body > div > div:nth-of-type(3) div:nth-of-type(3) {
 	top: 17.5%;
 }
 
+/* interactie */
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(3) > div::before {
 	animation: explosie2 1.75s ease-in-out infinite;
 	animation-delay: 3s;
@@ -482,6 +491,7 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(4) {
 	animation-delay: 3s;
 }
 
+/* vuurwerk pijl animatie */
 @keyframes luchtIn2 {
 	0%,
 	45% {
@@ -500,7 +510,6 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(4) {
 }
 
 /* vuurwerk 3 */
-
 body > div > div:nth-of-type(3) > div:nth-of-type(5) {
 	position: absolute;
 }
@@ -563,6 +572,7 @@ body > div > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(2n)::befo
 	background-color: rgb(190, 121, 121);
 }
 
+/* vuurwerk animatie  */
 @keyframes explosie3 {
 	0% {
 		top: 100%;
@@ -580,6 +590,7 @@ body > div > div:nth-of-type(3) div:nth-of-type(5) {
 	top: 40%;
 }
 
+/* interactie */
 input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(5) > div::before {
 	animation: explosie3 1.75s ease-in-out infinite;
 	animation-delay: 2.1s;
@@ -599,6 +610,7 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(6) {
 	animation-delay: 0.5s;
 }
 
+/* vuurwerk pijl animatie */
 @keyframes luchtIn3 {
 	0%,
 	45% {
@@ -617,7 +629,6 @@ input[type='checkbox']:checked + div > div:nth-of-type(3) > div:nth-of-type(6) {
 }
 
 /* vuurwerk weerspiegeling */
-
 body > div > div:nth-of-type(3) > div:nth-of-type(7) {
 	position: absolute;
 }
@@ -1039,7 +1050,6 @@ body > div > div:nth-of-type(5)::after {
 	position: absolute;
 	left: 0;
 	top: 0;
-	/* transform: rotate(180deg); */
 	clip-path: var(--omringende-bergen);
 }
 
@@ -1061,6 +1071,7 @@ body > div > div:nth-of-type(6) {
 	height: 17.5vw;
 }
 
+/* Water weerspiegeling */
 body > div > div:nth-of-type(6)::before {
 	content: '';
 	position: absolute;
@@ -1073,10 +1084,9 @@ body > div > div:nth-of-type(6)::before {
 	clip-path: var(--berg-top);
 }
 
-/* test omringende bergen */
+/* Omringende bergen weerspeigeling */
 body > div > div:last-of-type {
 	background-color: rgba(4, 12, 42, 1);
-
 	background: linear-gradient(
 		210deg,
 		transparent 0,
@@ -1095,7 +1105,7 @@ body > div > div:last-of-type {
 	clip-path: var(--omringende-bergen);
 	z-index: 2 !important;
 }
-
+/* Omringende bergen weerspeigeling */
 body > div > div:nth-of-type(7) {
 	background-color: rgba(4, 12, 42, 1);
 	background: linear-gradient(360deg, transparent 0, transparent 50px, #565453 0, #565453 100%);
@@ -1127,7 +1137,7 @@ input[type='checkbox'] {
 	background-color: #c6c6c6;
 	box-shadow: inset 0 0 0.5vw rgba(0, 0, 0, 0.2);
 	border-radius: 20vw;
-	transition: 1s;
+	/* transition: 1s; */
 }
 
 input:checked[type='checkbox'] {
@@ -1143,9 +1153,10 @@ input[type='checkbox']:before {
 	background-color: white;
 	box-shadow: inset 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
 	transform: scale(1.1);
-	transition: 1s;
+	/* transition: 1s; */
 }
 
 input:checked[type='checkbox']:before {
 	left: 2.5vw;
+	/* transition: 1s; */
 }
