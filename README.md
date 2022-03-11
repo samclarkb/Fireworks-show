@@ -34,7 +34,7 @@ Er zijn een paar dingen waar ik niet aan toe ben gekomen, maar graag had willen 
 * gebruik maken van grid
 * Experimenteren met radio buttons en interactie
 * Een bloesem maken met CSS
-* toggle button animeren
+* Toggle button animeren
 
 ## :wrench: Installation
 
